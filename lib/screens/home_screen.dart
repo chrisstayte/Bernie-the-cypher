@@ -62,7 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(),
+                  border: Border.all(
+                    color: Theme.of(context).dividerColor,
+                  ),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
@@ -122,7 +124,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: double.infinity,
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(),
+                  border: Border.all(
+                    color: Theme.of(context).dividerColor,
+                  ),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: SingleChildScrollView(
@@ -143,15 +147,17 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 FilledButton(
                   style: FilledButton.styleFrom(
-                    backgroundColor: Colors.red,
-                  ),
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     setState(() {
                       _userSubmittedText.clear();
                       _cypheredText = '';
                     });
                   },
-                  child: Text('Clear'),
+                  child: Text(
+                    'Clear',
+                  ),
                 ),
                 const Gap(15),
                 FilledButton(

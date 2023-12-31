@@ -15,12 +15,16 @@ class MyApp extends StatelessWidget {
       title: 'Bernie The Cypher',
       themeMode: ThemeMode.system,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade900),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF0C1FCA),
+        ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.blue.shade900, brightness: Brightness.dark),
+          seedColor: const Color(0xFF0C1FCA),
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
